@@ -283,7 +283,7 @@ RUN apt-get purge -y qemu-* binfmt-support || true && \
     echo "" >> /etc/apt/sources.list.d/ubuntu.sources && \
     echo "Types: deb" >> /etc/apt/sources.list.d/ubuntu.sources && \
     echo "URIs: http://archive.ubuntu.com/ubuntu/" >> /etc/apt/sources.list.d/ubuntu.sources && \
-    echo "Suites: noble noble-updates noble-security" >> /etc/apt/sources.list.d/ubuntu.sources && \
+    echo "Suites: plucky noble-updates noble-security" >> /etc/apt/sources.list.d/ubuntu.sources && \
     echo "Components: main universe restricted multiverse" >> /etc/apt/sources.list.d/ubuntu.sources && \
     echo "Architectures: amd64" >> /etc/apt/sources.list.d/ubuntu.sources && \
     echo "Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg" >> /etc/apt/sources.list.d/ubuntu.sources && \
