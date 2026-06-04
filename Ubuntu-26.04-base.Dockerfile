@@ -24,8 +24,6 @@ RUN apt-get update && \
     # Essentials for adding PPAs
     software-properties-common \
     gnupg \
-    # Add PPAs for fastfetch and Firefox ESR
-    && add-apt-repository ppa:zhangsongcui3371/fastfetch -y && \
     # Update package lists again after adding PPAs
     apt-get update && \
     # Install all packages in a single command
@@ -98,7 +96,6 @@ RUN apt-get update && \
     xfsprogs \
     jfsutils \
     hfsprogs \
-    reiserfsprogs \
     cryptsetup \
     nilfs-tools \
     udftools \
@@ -117,7 +114,7 @@ RUN apt-get update && \
     ltrace \
     # Docker
     docker.io \
-    docker-compose-v2 \
+    docker-compose-plugin \
     && apt-get purge -y gdm3 gnome-session gnome-shell whoopsie && \
     apt-get autoremove -y
 
