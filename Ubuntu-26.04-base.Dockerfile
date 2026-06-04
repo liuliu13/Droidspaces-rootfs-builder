@@ -21,12 +21,9 @@ RUN chmod +x /usr/local/bin/download-firmware /etc/profile.d/ds-aliases.sh
 # and setup are done here to minimize layers and maximize build speed.
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    # Essentials for adding PPAs
     software-properties-common \
-    gnupg \
-    # Update package lists again after adding PPAs
+    gnupg && \
     apt-get update && \
-    # Install all packages in a single command
     apt-get install -y --no-install-recommends \
     # Core utilities
     bash \
@@ -88,7 +85,7 @@ RUN apt-get update && \
     automake \
     libtool \
     pkg-config \
-    # File system tools
+    # File system tools (removed reiserfsprogs)
     dosfstools \
     exfatprogs \
     btrfs-progs \
